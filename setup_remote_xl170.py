@@ -5,7 +5,7 @@ import os
 from util import *
 from config_remote import *
 
-k = paramiko.RSAKey.from_private_key_file(KEY_LOCATION)
+k = paramiko.Ed25519Key.from_private_key_file(KEY_LOCATION)
 # connection to server
 server_conn = paramiko.SSHClient()
 server_conn.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -59,20 +59,20 @@ cmd = "cd ~/{}/shenango && make clean && make && make -C bindings/cc"\
 execute_remote([server_conn, client_conn] + agent_conns, cmd, True)
 
 # settting up machines
-print("Setting up machines...")
-cmd = "cd ~/{}/shenango/breakwater && sudo ./scripts/setup_machine.sh"\
-        .format(ARTIFACT_PATH)
-execute_remote([server_conn, client_conn] + agent_conns, cmd, True)
+# print("Setting up machines...")
+# cmd = "cd ~/{}/shenango/breakwater && sudo ./scripts/setup_machine.sh"\
+#         .format(ARTIFACT_PATH)
+# execute_remote([server_conn, client_conn] + agent_conns, cmd, True)
 
-print("Building Breakwater...")
-cmd = "cd ~/{}/shenango/breakwater && make clean && make &&"\
-        " make -C bindings/cc".format(ARTIFACT_PATH)
-execute_remote([server_conn, client_conn] + agent_conns, cmd, True)
+# print("Building Breakwater...")
+# cmd = "cd ~/{}/shenango/breakwater && make clean && make &&"\
+#         " make -C bindings/cc".format(ARTIFACT_PATH)
+# execute_remote([server_conn, client_conn] + agent_conns, cmd, True)
 
-print("Setting up memcahced...")
-cmd = "cd ~/{}/shenango-memcached && ./version.sh && autoreconf -i"\
-        " && ./configure --with-shenango=../shenango"\
-        .format(ARTIFACT_PATH)
-execute_remote([server_conn], cmd, True)
+# print("Setting up memcahced...")
+# cmd = "cd ~/{}/shenango-memcached && ./version.sh && autoreconf -i"\
+#         " && ./configure --with-shenango=../shenango"\
+#         .format(ARTIFACT_PATH)
+# execute_remote([server_conn], cmd, True)
 
 print("Done.")

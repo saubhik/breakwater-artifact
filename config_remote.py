@@ -3,16 +3,16 @@
 ###
 
 # Public domain or IP of server
-SERVER = "server.breakwater.com"
+SERVER = "hp131.utah.cloudlab.us"
 # Public domain or IP of client
-CLIENT = "client.breakwater.com"
+CLIENT = "hp122.utah.cloudlab.us"
 # Public domain or IP of agents
-AGENTS = ["agent1.breakwater.com", "agent2.breakwater.com"]
+AGENTS = ["hp136.utah.cloudlab.us", "hp160.utah.cloudlab.us", "hp138.utah.cloudlab.us"]
 
 # Username and SSH credential location to access
 # the server, client, and agents via public IP
-USERNAME = "breakwater"
-KEY_LOCATION = "/path/to/credential/credential.pem"
+USERNAME = "saubhik"
+KEY_LOCATION = "/home/parallels/.ssh/id_ed25519"
 
 # Location of Shenango to be installed. With "", Shenango
 # will be installed in the home direcotry
@@ -25,4 +25,4 @@ NET_RTT = 10
 ARTIFACT_PATH = ARTIFACT_PARENT
 if ARTIFACT_PATH != "":
     ARTIFACT_PATH += "/"
-ARTIFACT_PATH += "bw_artif"
+ARTIFACT_PATH += "artifacts"
