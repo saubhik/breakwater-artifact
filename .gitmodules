@@ -1,11 +1,3 @@
-[submodule "shenango-memcached"]
-	path = shenango-memcached
-  url = https://github.com/shenango/memcached
-  branch = breakwater
-[submodule "memcached-client"]
-	path = memcached-client
-	url = https://github.com/inhocho89/memcached-client
-	branch = master
 [submodule "shenango"]
 	path = shenango
 	url = https://github.com/shenango/caladan
