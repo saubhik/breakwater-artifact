@@ -3,11 +3,11 @@
 ###
 
 # Public domain or IP of server
-SERVER = "hp131.utah.cloudlab.us"
+SERVER = "hp067.utah.cloudlab.us"
 # Public domain or IP of client
-CLIENT = "hp122.utah.cloudlab.us"
+CLIENT = "hp059.utah.cloudlab.us"
 # Public domain or IP of agents
-AGENTS = ["hp136.utah.cloudlab.us", "hp160.utah.cloudlab.us", "hp138.utah.cloudlab.us"]
+# AGENTS = ["hp136.utah.cloudlab.us", "hp160.utah.cloudlab.us"]
 
 # Username and SSH credential location to access
 # the server, client, and agents via public IP
