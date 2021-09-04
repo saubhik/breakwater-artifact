@@ -43,4 +43,10 @@ cmd = "cd ~/{}/shenango && make clean && make && make -C bindings/cc"\
         .format(ARTIFACT_PATH)
 execute_remote([server_conn, client_conn], cmd, True)
 
+# build Ksched and perform machine setup
+print("Building Ksched...")
+cmd = "cd ~/{}/shenango && pushd ksched && make clean && make && popd && " \
+        "sudo ./scripts/setup_machine.sh".format(ARTIFACT_PATH)
+execute_remote([server_conn, client_conn], cmd, True)
+
 print("Done.")

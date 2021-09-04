@@ -1,7 +1,6 @@
 [submodule "shenango"]
 	path = shenango
 	url = https://github.com/shenango/caladan
-
 [submodule "mvfst"]
 	path = mvfst
-	url = https://github.com/facebookincubator/mvfst
+	url = git@github.com:facebookincubator/mvfst.git

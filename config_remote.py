@@ -3,9 +3,9 @@
 ###
 
 # Public domain or IP of server
-SERVER = "hp067.utah.cloudlab.us"
+SERVER = "hp192.utah.cloudlab.us"
 # Public domain or IP of client
-CLIENT = "hp059.utah.cloudlab.us"
+CLIENT = "hp163.utah.cloudlab.us"
 # Public domain or IP of agents
 # AGENTS = ["hp136.utah.cloudlab.us", "hp160.utah.cloudlab.us"]
 
